@@ -1,11 +1,8 @@
 #ifndef NBODYFFT_H
 #define NBODYFFT_H
 
-#ifdef _WIN32
-#include "winlibs/fftw3.h"
-#else
-#include <fftw3.h>
-#endif
+#include <mkl.h> 
+#include "mkl_dfti.h"
 #include <complex>
 
 using namespace std;
@@ -13,6 +10,8 @@ using namespace std;
 typedef double (*kernel_type)(double, double, double);
 
 typedef double (*kernel_type_2d)(double, double, double, double, double);
+
+void create_dfti_handle(DFTI_DESCRIPTOR_HANDLE desc_handle, long long n_fft_coeffs, bool is_1_d);
 
 void precompute_2d(double x_max, double x_min, double y_max, double y_min, int n_boxes, int n_interpolation_points,
                    kernel_type_2d kernel, double *box_lower_bounds, double *box_upper_bounds, double *y_tilde_spacings,

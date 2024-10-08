@@ -152,9 +152,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="src\annoylib.h" />
     <ClInclude Include="src\kissrandom.h" />
     <ClInclude Include="src\winlibs\mman.h" />
@@ -182,6 +179,19 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\tsne.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="examples\test.m" />
+    <None Include="examples\test.ipynb" />
+    <None Include="examples\test.R" />
+    <None Include="fast_tsne.py" />
+    <None Include="fast_tsne.m" />
+    <None Include="fast_tsne.R" />
+    <None Include="src\time_code.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="examples\" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

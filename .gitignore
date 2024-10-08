@@ -1,3 +1,4 @@
+c/
 bin/*
 *.m~
 *.dat
@@ -9,4 +10,5 @@ CMakeCache.txt
 *.cbp
 CMakeFiles/
 cmake-build-debug/
+fftw-3.3.10/
 Makefile
