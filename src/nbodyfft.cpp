@@ -3,7 +3,8 @@
 #include "parallel_for.h"
 #include "time_code.h"
 #include "nbodyfft.h"
-
+#include "fftw3.h"
+#include "fftw3_mkl.h"
 
 
 void precompute_2d(double x_max, double x_min, double y_max, double y_min, int n_boxes, int n_interpolation_points,
