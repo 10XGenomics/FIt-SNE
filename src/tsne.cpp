@@ -35,7 +35,8 @@
 #ifdef _WIN32
 #define _CRT_SECURE_NO_DEPRECATE
 #endif
-
+// annoy neads float.h to compile
+#include <float.h>
 #include "annoylib.h"
 #include "kissrandom.h"
 #include "nbodyfft.h"
@@ -46,7 +47,7 @@
 #include "tsne.h"
 #include "vptree.h"
 #include <cstring>
-#include <float.h>
+
 #include <fstream>
 #include <iostream>
 #include <math.h>

@@ -9,7 +9,7 @@
    specified as well. Error messages and exits were converted to `throw` No
    attempt was made to convert this to more modern C++.
 
-   
+
 */
 
 #include "10x_tsne.h"
