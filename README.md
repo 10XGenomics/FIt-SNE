@@ -26,8 +26,8 @@ R, Matlab, and Python wrappers are `fast_tsne.R`, `fast_tsne.m`, and `fast_tsne.
 ### OSX and Linux
 The only prerequisite is [FFTW](http://www.fftw.org/), which can be downloaded and installed from the website. Then, from the root directory compile the code as:
 ```bash
-g++ -std=c++11 -O3  src/sptree.cpp src/tsne.cpp src/nbodyfft.cpp  -o bin/fast_tsne -pthread -lfftw3 -lm -Wno-address-of-packed-member
-```
+source /opt/intel/oneapi/setvars.sh  
+g++  -std=c++11 -O3  -I${MKLROOT}/include -L${MKLROOT}/lib -I${MKLROOT}/include/fftw/ -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -ldl src/sptree.cpp src/tsne.cpp src/nbodyfft.cpp  -o bin/fast_tsne2 -pthread -lfftw3 -lm -Wno-address-of-packed-member -L$HOME/lib/lib -I$HOME/lib/include/ -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/ -g
 See [here](https://github.com/KlugerLab/FIt-SNE/issues/35) for instructions in case one does not have `sudo` rights (one can install `FFTW` in the home directory and provide its path to `g++`).
 
 Check out `examples/` for usage. The [Python demo notebook](https://github.com/KlugerLab/FIt-SNE/blob/master/examples/test.ipynb) walks one through the most of the available options using the MNIST data set.
