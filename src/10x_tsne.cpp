@@ -311,7 +311,7 @@ TSNEState::TSNEState(double *X, int N, int D, double *Y, int no_dims,
 void TSNEState::step_tsne_by(int step) {
   TSNE *tsne = new TSNE(verbose);
   const int cur_max = std::min(step + iter, max_iter);
-  for (; iter < step & iter < max_iter; iter++) {
+  for (; iter < cur_max; iter++) {
     itTest = iter;
     if (exact) {
       // Compute the exact gradient using full P matrix
