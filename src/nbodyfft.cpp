@@ -1,7 +1,8 @@
 #include "winlibs/stdafx.h"
 
 #include "fftw3.h"
-#include "fftw3_mkl.h"
+// Hoping I don't need this as it's license prevents distribution.
+// #include "fftw3_mkl.h"
 #include "nbodyfft.h"
 #include "parallel_for.h"
 #include "time_code.h"
