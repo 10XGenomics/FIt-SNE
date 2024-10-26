@@ -477,8 +477,8 @@ void TSNEState::step_tsne_by(int step) {
       }
       start_time = std::chrono::steady_clock::now();
     }
-    delete (tsne);
   }
+  delete (tsne);
 }
 
 TSNEState::~TSNEState() {
