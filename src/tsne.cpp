@@ -1757,7 +1757,7 @@ int TSNE::computeGaussianPerplexity(
                     &closest_distances[1], cur_P, K, -1, perplexity, sigma,
                     false, perplexity_list_length, perplexity_list);
                 ++bar;
-                if (t == 0 && n % 100 == 0) {
+                if (verbose && t == 0 && n % 100 == 0) {
                   bar.display();
                   //    if (perplexity >= 0) {
                   //        printf(" - point %d of %d, most recent beta
